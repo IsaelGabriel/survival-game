@@ -51,6 +51,11 @@ public static class Window
     public static bool IsOpen { get; private set; } = false;
 
     /// <summary>
+    /// Checks if the window is required to be closed.
+    /// </summary>
+    public static bool ShouldClose => Raylib.WindowShouldClose();
+
+    /// <summary>
     /// Called to open a window and define it's parameters.
     /// </summary>
     /// <param name="size">Vector2 for the size of the window.</param>
@@ -68,11 +73,6 @@ public static class Window
         Raylib.InitWindow(Width, Height, Title);
         IsOpen = true;
     }
-
-    /// <summary>
-    /// Checks if the window is required to be closed.
-    /// </summary>
-    public static bool ShouldClose() => Raylib.WindowShouldClose();
 
     /// <summary>
     /// Closes the current window.
