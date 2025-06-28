@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using survival.Rendering;
 
 namespace survival;
 
@@ -17,6 +18,7 @@ public static class Game
         while (!Window.ShouldClose)
         {
             // Game loop and rendering here.
+            Renderer.Render();
         }
 
         Window.Close();

@@ -1,5 +1,6 @@
 using System.Numerics;
 using Raylib_cs;
+using survival.Rendering;
 
 namespace survival;
 
@@ -71,6 +72,7 @@ public static class Window
         Size = size;
         Title = title;
         Raylib.InitWindow(Width, Height, Title);
+        Raylib.SetTargetFPS(Renderer.TargetFPS);
         IsOpen = true;
     }
 
